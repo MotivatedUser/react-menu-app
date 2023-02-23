@@ -1,56 +1,141 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import {
+  tunaSandwich,
+  catfish,
+  salmonSteak,
+  trout,
+  walleyeSticks,
+  perch,
+} from "./features/MENU.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+      <header>
+        <div>
+          <p>
+            by Doug Altermatt |
+            <a href="https://www.linkedin.com/in/d-altermatt-motivated-user/">
+              LinkedIn
+            </a>{" "}
+            |<a href="https://github.com/MotivatedUser">GitHub</a> |
+            <a href="tel:+15094815800">(509)481-5800</a>
+          </p>
+          <h1>Something Fishy Responsive Menu App</h1>
+        </div>
       </header>
+      <body className="App-body">
+        
+        <Container>
+          <Row>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{tunaSandwich.name}</h1>
+                <img
+                  className="menuImage"
+                  src={tunaSandwich.image}
+                  alt="Tuna Sandwich on white plate."
+                />
+                <p className="menuCalories">
+                  Calories : {tunaSandwich.calories}
+                </p>
+                <h3 className="menuPrice">${tunaSandwich.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {tunaSandwich.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{salmonSteak.name}</h1>
+                <img
+                  className="menuImage"
+                  src={salmonSteak.image}
+                  alt="Salmon Steak"
+                />
+                <p className="menuCalories">
+                  Calories : {salmonSteak.calories}
+                </p>
+                <h3 className="menuPrice">${salmonSteak.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {salmonSteak.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{catfish.name}</h1>
+                <img
+                  className="menuImage"
+                  src={catfish.image}
+                  alt="Fried Catfish"
+                />
+                <p className="menuCalories">Calories : {catfish.calories}</p>
+                <h3 className="menuPrice">${catfish.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {catfish.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{trout.name}</h1>
+                <img
+                  className="menuImage"
+                  src={trout.image}
+                  alt="Baked Trout"
+                />
+                <p className="menuCalories">Calories : {trout.calories}</p>
+                <h3 className="menuPrice">${trout.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {trout.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{walleyeSticks.name}</h1>
+                <img
+                  className="menuImage"
+                  src={walleyeSticks.image}
+                  alt="Raw fish with heads removed as a joke"
+                />
+                <p className="menuCalories">
+                  Calories : {walleyeSticks.calories}
+                </p>
+                <h3 className="menuPrice">${walleyeSticks.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {walleyeSticks.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3>
+              <div className="allMenu">
+                <h1 className="menuName">{perch.name}</h1>
+                <img
+                  className="menuImage"
+                  src={perch.image}
+                  alt="Tuna Sandwich on white plate."
+                />
+                <p className="menuCalories">Calories : {perch.calories}</p>
+                <h3 className="menuPrice">${perch.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {perch.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </body>
     </div>
   );
 }

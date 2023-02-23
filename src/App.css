@@ -37,3 +37,57 @@
     transform: translateY(0px);
   }
 }
+
+/* Menu Card CSS */
+Container {
+width: 31%;
+height: 31%;
+}
+.allMenu {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 20rem;
+  height: 30rem;
+  margin: 5px;
+  padding: 5%;
+  border: 3px solid rgb(11, 255, 11);
+  border-radius: 20%;
+  }
+
+.menuName {
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: oblique;
+}
+
+.menuCalories {
+  font-size: 1.25rem;
+  margin: 2px;
+}
+
+.menuPrice {
+  color: red;
+  font-size: 3rem;
+  margin: 2px;
+}
+
+.menuDisclaimer {
+  font-size: .75rem;
+  font-weight: 700;
+}
+.menuImage {
+  width: 67%;
+  border-radius: 50%;
+}
+
+.menuButtons {
+  background-color: orange;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.menuButtons:hover {
+  background-color: yellow;
+  height: 3rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
