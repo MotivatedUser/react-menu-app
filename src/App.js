@@ -29,9 +29,10 @@ function App() {
           <h1>Something Fishy Responsive Menu App</h1>
         </div>
       </header>
+
       <body className="App-body">
         <Container>
-          <h2 className="menuTitle" >Main Dishes</h2>
+          <h2 className="menuTitle">Main Dishes</h2>
           <Row>
             <Col col-3 col-xs-12 col-s-6 col-lg-4 col-xl-3>
               <div className="allMenu">
@@ -157,54 +158,60 @@ function App() {
           <h2 className="menuTitle">Drink Menu</h2>
           <Row>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
-            <div className="allMenu">
+              <div className="allMenu">
                 <h1 className="menuName">{shrimp.name}</h1>
                 <img
-                  className="menuImage"
+                  className="drinkImage"
                   src={shrimp.image}
                   alt="A Shrimp drink."
                 />
                 <p className="menuCalories">Calories : {shrimp.calories}</p>
                 <h3 className="menuPrice">${shrimp.price}</h3>
+                <br />
                 <button className="menuButtons">Add</button>
               </div>
-              </Col>
-              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{cod.name}</h1>
                 <img
-                  className="menuImage"
+                  className="drinkImage"
                   src={cod.image}
                   alt="Cocktail made with Cod"
                 />
                 <p className="menuCalories">Calories : {cod.calories}</p>
                 <h3 className="menuPrice">${cod.price}</h3>
+                <br />
                 <button className="menuButtons">Add</button>
               </div>
-              </Col>
-              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{tuna.name}</h1>
                 <img
-                  className="menuImage"
+                  className="drinkImage"
                   src={tuna.image}
                   alt="Tuna Cocktail"
                 />
                 <p className="menuCalories">Calories : {tuna.calories}</p>
                 <h3 className="menuPrice">${tuna.price}</h3>
+                <br />
                 <button className="menuButtons">Add</button>
               </div>
-              </Col>
-              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{salmonSplash.name}</h1>
                 <img
-                  className="menuImage"
+                  className="drinkImage"
                   src={salmonSplash.image}
                   alt="Salmon Cocktail"
                 />
-                <p className="menuCalories">Calories : {salmonSplash.calories}</p>
+                <p className="menuCalories">
+                  Calories : {salmonSplash.calories}
+                </p>
                 <h3 className="menuPrice">${salmonSplash.price}</h3>
+                <br />
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
