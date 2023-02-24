@@ -11,6 +11,7 @@ import {
   perch,
   sturgeon,
 } from "./features/MENU.js";
+import { barbie, surprise, cheese, platter } from "./features/APPETIZERS";
 import { shrimp, cod, tuna, salmonSplash } from "./features/DRINKS.js";
 
 function App() {
@@ -31,6 +32,69 @@ function App() {
       </header>
 
       <body className="App-body">
+      <Container>
+          <h2 className="menuTitle">Starter Menu</h2>
+          <Row>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{barbie.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={barbie.image}
+                  alt="A Shrimp drink."
+                />
+                <p className="menuCalories">Calories : {barbie.calories}</p>
+                <h3 className="menuPrice">${barbie.price}</h3>
+                <p className="menuDisclaimer" >Disclaimer : {barbie.disclaimer}</p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{surprise.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={surprise.image}
+                  alt="Cocktail made with Cod"
+                />
+                <p className="menuCalories">Calories : {surprise.calories}</p>
+                <h3 className="menuPrice">${surprise.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{cheese.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={cheese.image}
+                  alt="Tuna Cocktail"
+                />
+                <p className="menuCalories">Calories : {cheese.calories}</p>
+                <h3 className="menuPrice">${cheese.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{platter.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={platter.image}
+                  alt="Salmon Cocktail"
+                />
+                <p className="menuCalories">
+                  Calories : {platter.calories}
+                </p>
+                <h3 className="menuPrice">${platter.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
         <Container>
           <h2 className="menuTitle">Main Dishes</h2>
           <Row>
