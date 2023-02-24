@@ -9,7 +9,9 @@ import {
   trout,
   walleyeSticks,
   perch,
+  sturgeon,
 } from "./features/MENU.js";
+import { shrimp, cod, tuna, salmonSplash } from "./features/DRINKS.js";
 
 function App() {
   return (
@@ -28,10 +30,10 @@ function App() {
         </div>
       </header>
       <body className="App-body">
-        
         <Container>
+          <h2 className="menuTitle" >Main Dishes</h2>
           <Row>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4 col-xl-3>
               <div className="allMenu">
                 <h1 className="menuName">{tunaSandwich.name}</h1>
                 <img
@@ -49,7 +51,7 @@ function App() {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{salmonSteak.name}</h1>
                 <img
@@ -67,7 +69,7 @@ function App() {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{catfish.name}</h1>
                 <img
@@ -83,7 +85,7 @@ function App() {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{trout.name}</h1>
                 <img
@@ -99,7 +101,7 @@ function App() {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{walleyeSticks.name}</h1>
                 <img
@@ -117,7 +119,7 @@ function App() {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
-            <Col col-3>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{perch.name}</h1>
                 <img
@@ -130,6 +132,79 @@ function App() {
                 <p className="menuDisclaimer">
                   Disclaimer : {perch.disclaimer}
                 </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{sturgeon.name}</h1>
+                <img
+                  className="menuImage"
+                  src={sturgeon.image}
+                  alt="Tuna Sandwich on white plate."
+                />
+                <p className="menuCalories">Calories : {sturgeon.calories}</p>
+                <h3 className="menuPrice">${sturgeon.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {sturgeon.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <h2 className="menuTitle">Drink Menu</h2>
+          <Row>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <div className="allMenu">
+                <h1 className="menuName">{shrimp.name}</h1>
+                <img
+                  className="menuImage"
+                  src={shrimp.image}
+                  alt="A Shrimp drink."
+                />
+                <p className="menuCalories">Calories : {shrimp.calories}</p>
+                <h3 className="menuPrice">${shrimp.price}</h3>
+                <button className="menuButtons">Add</button>
+              </div>
+              </Col>
+              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{cod.name}</h1>
+                <img
+                  className="menuImage"
+                  src={cod.image}
+                  alt="Cocktail made with Cod"
+                />
+                <p className="menuCalories">Calories : {cod.calories}</p>
+                <h3 className="menuPrice">${cod.price}</h3>
+                <button className="menuButtons">Add</button>
+              </div>
+              </Col>
+              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{tuna.name}</h1>
+                <img
+                  className="menuImage"
+                  src={tuna.image}
+                  alt="Tuna Cocktail"
+                />
+                <p className="menuCalories">Calories : {tuna.calories}</p>
+                <h3 className="menuPrice">${tuna.price}</h3>
+                <button className="menuButtons">Add</button>
+              </div>
+              </Col>
+              <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{salmonSplash.name}</h1>
+                <img
+                  className="menuImage"
+                  src={salmonSplash.image}
+                  alt="Salmon Cocktail"
+                />
+                <p className="menuCalories">Calories : {salmonSplash.calories}</p>
+                <h3 className="menuPrice">${salmonSplash.price}</h3>
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
