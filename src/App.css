@@ -59,11 +59,52 @@ background: linear-gradient(0deg, rgba(31,222,224,1) 0%, rgba(207,233,77,0.83937
   border: 2px solid blue;
 }
 
+/* Jokes */
+.joke-container {
+  position: relative;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  margin-top: 0%;
+  margin-left: 0%;
+  cursor: grab;
+  border-radius: 50%;
+  padding: 5%;
+  }
+  .joke-container:active {
+    background-color: purple;
+    cursor: grabbing;
+    
+    }
+
+
+.joke-text {
+  color:white;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.image {
+  height: 25rem;
+}
+
 /* Menu Card CSS */
 Container {
 width: 31%;
 height: 31%;
 }
+
+.links-container {
+  color: yellow;
+}
+
+.links {
+  color: yellow;
+}
+.links:hover {
+  color: black;
+}
+
 .allMenu {
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 20rem;

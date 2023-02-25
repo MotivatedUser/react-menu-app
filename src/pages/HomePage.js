@@ -1,10 +1,38 @@
+import FishJokes from "../app/components/FishJokes";
+import ImageSlider from "../app/components/ImageSlider";
+import { Col, Row, Container } from "reactstrap";
+
 const HomePage = () => {
-    return(
-        <>
-        <div>
+  return (
+    <>
+      <Container>
+        <Row>
+          <Col col-sm-12 col-md-6 col-3>
+            <ImageSlider />
+          </Col>
+          <Col col-sm-12>
+            <FishJokes />
+          </Col>
+        </Row>
+        <Row>
+          <div>
             <h1>Future Home page for this fake dining establishment.</h1>
-        </div>
-        </>
-    )
-}
+            <p>
+              Welcome to our fish restaurant, where we offer the freshest fish
+              in town...or at least the ones we catch in our bathtub! Just
+              kidding, we only serve the best quality fish that money can
+              buy...but we do have a bathtub in the back if you need to rinse
+              off after diving into our delicious fish dishes. Our fish are so
+              good, you might just end up floundering for words after taking a
+              bite. But don't worry, we won't judge you for your fish-induced
+              speechlessness. So, whether you're a seasoned fish lover or just
+              starting to dip your toes into the world of seafood, come on in
+              and let us school you on how to have a fintastic time!
+            </p>
+          </div>
+        </Row>
+      </Container>
+    </>
+  );
+};
 export default HomePage;

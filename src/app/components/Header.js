@@ -32,13 +32,13 @@ const Header = () => {
 
     <Container>
         <Row className="nav-author">
-        <p>
+        <p className="links-container" >
           by Doug Altermatt |
-          <a href="https://www.linkedin.com/in/d-altermatt-motivated-user/">
+          <a className="links" href="https://www.linkedin.com/in/d-altermatt-motivated-user/">
             LinkedIn
           </a>{" "}
-          |<a href="https://github.com/MotivatedUser">GitHub</a> |
-          <a href="tel:+15094815800">(509)481-5800</a>
+          |<a className="links" href="https://github.com/MotivatedUser">GitHub</a> |
+          <a className="links" href="tel:+15094815800">(509)481-5800</a>
         </p>
         </Row>
 

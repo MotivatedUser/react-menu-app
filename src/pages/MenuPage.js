@@ -22,9 +22,13 @@ const MenuPage = () => {
     return (
     <>
     <div>
-        <h5>Appetizers | Main Course | Drinks</h5>
+        <h5 className="links-container">
+            <a href="#starter" className="links">Starter Menu</a> | 
+            <a href="#mainCourse" className="links">Main Dishes</a> | 
+            <a href="#drinks" className="links">Drink Menu</a>
+        </h5>
       <Container className="App-body" >
-          <h2 className="menuTitle">Starter Menu</h2>
+          <h2 className="menuTitle" id="starter">Starter Menu</h2>
           <Row>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
@@ -119,7 +123,7 @@ const MenuPage = () => {
           </Row>
         </Container>
         <Container>
-          <h2 className="menuTitle">Main Dishes</h2>
+          <h2 className="menuTitle" id="mainCourse" >Main Dishes</h2>
           <Row>
             <Col col-3 col-xs-12 col-s-6 col-lg-4 col-xl-3>
               <div className="allMenu">
@@ -274,7 +278,7 @@ const MenuPage = () => {
           </Row>
         </Container>
         <Container>
-          <h2 className="menuTitle">Drink Menu</h2>
+          <h2 className="menuTitle" id="drinks" >Drink Menu</h2>
           <Row>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
