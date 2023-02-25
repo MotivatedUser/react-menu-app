@@ -32,3 +32,19 @@ export const salmonSplash = new MenuDrink(
     9.99,
     "https://images.unsplash.com/photo-1592858167090-2473780d894d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRyaW5rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
 )
+
+export const tonic = new MenuDrink(
+    "Trout Tonic",
+    "Drink",
+    150,
+    6.99,
+    "https://images.unsplash.com/photo-1453825012366-3738046cb6c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9uaWMlMjB3YXRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+)
+
+export const ale = new MenuDrink(
+    "Anchovy Ale",
+    "Drink",
+    770,
+    4.00,
+    "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+)

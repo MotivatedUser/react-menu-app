@@ -10,9 +10,11 @@ import {
   walleyeSticks,
   perch,
   sturgeon,
+  squid,
+  twizzler,
 } from "../features/MENU.js";
-import { barbie, surprise, cheese, platter } from "../features/APPETIZERS";
-import { shrimp, cod, tuna, salmonSplash } from "../features/DRINKS.js";
+import { barbie, surprise, cheese, platter, crappie, salmonella } from "../features/APPETIZERS";
+import { shrimp, cod, tuna, salmonSplash, tonic, ale } from "../features/DRINKS.js";
 
 
 
@@ -20,6 +22,7 @@ const MenuPage = () => {
     return (
     <>
     <div>
+        <h5>Appetizers | Main Course | Drinks</h5>
       <Container className="App-body" >
           <h2 className="menuTitle">Starter Menu</h2>
           <Row>
@@ -77,6 +80,38 @@ const MenuPage = () => {
                   Calories : {platter.calories}
                 </p>
                 <h3 className="menuPrice">${platter.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{crappie.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={crappie.image}
+                  alt="Hamburger"
+                />
+                <p className="menuCalories">
+                  Calories : {crappie.calories}
+                </p>
+                <h3 className="menuPrice">${crappie.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{salmonella.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={salmonella.image}
+                  alt="Hamburger"
+                />
+                <p className="menuCalories">
+                  Calories : {salmonella.calories}
+                </p>
+                <h3 className="menuPrice">${salmonella.price}</h3>
                 <br />
                 <button className="menuButtons">Add</button>
               </div>
@@ -204,6 +239,38 @@ const MenuPage = () => {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{twizzler.name}</h1>
+                <img
+                  className="menuImage"
+                  src={twizzler.image}
+                  alt="Tuna Sandwich on white plate."
+                />
+                <p className="menuCalories">Calories : {twizzler.calories}</p>
+                <h3 className="menuPrice">${twizzler.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {twizzler.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{squid.name}</h1>
+                <img
+                  className="menuImage"
+                  src={squid.image}
+                  alt="Tuna Sandwich on white plate."
+                />
+                <p className="menuCalories">Calories : {squid.calories}</p>
+                <h3 className="menuPrice">${squid.price}</h3>
+                <p className="menuDisclaimer">
+                  Disclaimer : {squid.disclaimer}
+                </p>
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
           </Row>
         </Container>
         <Container>
@@ -237,6 +304,35 @@ const MenuPage = () => {
                 <button className="menuButtons">Add</button>
               </div>
             </Col>
+            
+            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{tonic.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={tonic.image}
+                  alt="Tuna Cocktail"
+                />
+                <p className="menuCalories">Calories : {tonic.calories}</p>
+                <h3 className="menuPrice">${tonic.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col><Col col-3 col-xs-12 col-s-6 col-lg-4>
+              <div className="allMenu">
+                <h1 className="menuName">{ale.name}</h1>
+                <img
+                  className="drinkImage"
+                  src={ale.image}
+                  alt="Tuna Cocktail"
+                />
+                <p className="menuCalories">Calories : {ale.calories}</p>
+                <h3 className="menuPrice">${ale.price}</h3>
+                <br />
+                <button className="menuButtons">Add</button>
+              </div>
+            </Col>
+            
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
                 <h1 className="menuName">{tuna.name}</h1>

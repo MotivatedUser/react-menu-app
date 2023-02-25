@@ -62,3 +62,21 @@ export const sturgeon = new MenuItem (
     "https://images.unsplash.com/photo-1654451695049-f5d7805d09d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBpbGUlMjBvZiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
     "This item contains fish"
 )
+
+export const squid = new MenuItem(
+    "Squid Nuggets",
+    "Meal",
+    625,
+    16.99,
+    "https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bnVnZ2V0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "Even after testing, we are still not sure what all this contains."
+)
+
+export const twizzler = new MenuItem(
+    "Tuna Twizzlers",
+    "Meal",
+    990,
+    15.99,
+    "https://plus.unsplash.com/premium_photo-1674654419438-3720f0b71087?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "This item contains fish."
+)
