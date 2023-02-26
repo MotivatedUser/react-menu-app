@@ -16,7 +16,7 @@ const HomePage = () => {
         </Row>
         <Row>
           <div>
-            <h1>Future Home page for this fake dining establishment.</h1>
+            <h1 className="header-subtitle">Fish so fresh, you'll think we have a bathtub in the kitchen... oh wait, we do!</h1>
             <p>
               Welcome to our fish restaurant, where we offer the freshest fish
               in town...or at least the ones we catch in our bathtub! Just
