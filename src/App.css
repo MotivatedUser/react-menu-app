@@ -95,6 +95,11 @@ p {
   height: 25rem;
 }
 
+.cartImage {
+  width: 20%;
+  border-radius: 50%;
+}
+
 /* Menu Card CSS */
 Container {
 width: 31%;

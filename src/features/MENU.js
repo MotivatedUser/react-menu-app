@@ -8,6 +8,7 @@ export const tunaSandwich = new MenuItem(
     "https://images.unsplash.com/photo-1626459865967-8adf56d3c97e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHVuYSUyMHNhbmR3aWNoZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
     "This item contains fish"
 );
+console.log(tunaSandwich)
 
 export const catfish = new MenuItem(
     "Catfish Plate",

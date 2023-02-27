@@ -56,14 +56,17 @@ const Header = () => {
             <NavLink className="nav-link" to="/">
                 <FontAwesomeIcon icon={faHome} /> Home
             </NavLink>
-            <NavLink className="nav-link" to="/aboutPage">
+            <NavLink className="nav-link" to="/about">
                 <FontAwesomeIcon icon={faStar} /> About
             </NavLink>
-            <NavLink className="nav-link" to="/menuPage">
+            <NavLink className="nav-link" to="/menu">
                 <FontAwesomeIcon icon={faUtensils} /> Menu
             </NavLink>
-            <NavLink className="nav-link" to="/checkoutPage">
+            <NavLink className="nav-link" to="/cart">
                 <FontAwesomeIcon icon={faCreditCard} /> Order
+            </NavLink>
+            <NavLink className="nav-link" to="/checkout">
+              Checkout testing
             </NavLink>
           </NavItem>
         </Nav>

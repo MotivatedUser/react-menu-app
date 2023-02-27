@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "../App.css";
 import {
-  tunaSandwich,
-  catfish,
-  salmonSteak,
-  trout,
-  walleyeSticks,
-  perch,
-  sturgeon,
-  squid,
-  twizzler,
-} from "../features/MENU.js";
+  tunaSandwich, catfish, salmonSteak, trout, walleyeSticks, perch, sturgeon,
+  squid, twizzler } from "../features/MENU.js";
 import { barbie, surprise, cheese, platter, crappie, salmonella } from "../features/APPETIZERS";
 import { shrimp, cod, tuna, salmonSplash, tonic, ale } from "../features/DRINKS.js";
-
-
+import Cart from "../app/components/Cart";
+import { CartContext } from "../app/components/CartContent";
 
 const MenuPage = () => {
+    const [cartItems, setCartItems] = useContext(CartContext);
+  
+    const addItemToCart = (item) => {
+      setCartItems([...cartItems, item]);
+      
+    };
+  
+    const calculateTotal = () => {
+      return cartItems.reduce((total, item) => total + item.price, 0);
+    };
+
     return (
     <>
     <div>
@@ -41,7 +44,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {barbie.calories}</p>
                 <h3 className="menuPrice">${barbie.price}</h3>
                 <p className="menuDisclaimer" >Disclaimer : {barbie.disclaimer}</p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(barbie)} >Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -55,7 +58,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {surprise.calories}</p>
                 <h3 className="menuPrice">${surprise.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(surprise)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -69,7 +72,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {cheese.calories}</p>
                 <h3 className="menuPrice">${cheese.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(cheese)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -85,7 +88,7 @@ const MenuPage = () => {
                 </p>
                 <h3 className="menuPrice">${platter.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(platter)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -101,7 +104,7 @@ const MenuPage = () => {
                 </p>
                 <h3 className="menuPrice">${crappie.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(crappie)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -117,7 +120,7 @@ const MenuPage = () => {
                 </p>
                 <h3 className="menuPrice">${salmonella.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(salmonella)}>Add</button>
               </div>
             </Col>
           </Row>
@@ -140,7 +143,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {tunaSandwich.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(tunaSandwich)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -158,7 +161,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {salmonSteak.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(salmonSteak)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -174,7 +177,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {catfish.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(catfish)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -190,7 +193,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {trout.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons"  onClick={() => addItemToCart(trout)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -208,7 +211,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {walleyeSticks.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons"  onClick={() => addItemToCart(walleyeSticks)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -224,7 +227,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {perch.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(perch)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -240,7 +243,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {sturgeon.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(sturgeon)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -256,7 +259,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {twizzler.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(twizzler)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -272,7 +275,7 @@ const MenuPage = () => {
                 <p className="menuDisclaimer">
                   Disclaimer : {squid.disclaimer}
                 </p>
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(squid)}>Add</button>
               </div>
             </Col>
           </Row>
@@ -291,7 +294,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {shrimp.calories}</p>
                 <h3 className="menuPrice">${shrimp.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(shrimp)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -305,7 +308,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {cod.calories}</p>
                 <h3 className="menuPrice">${cod.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(cod)}>Add</button>
               </div>
             </Col>
             
@@ -320,7 +323,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {tonic.calories}</p>
                 <h3 className="menuPrice">${tonic.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(tonic)}>Add</button>
               </div>
             </Col><Col col-3 col-xs-12 col-s-6 col-lg-4>
               <div className="allMenu">
@@ -333,7 +336,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {ale.calories}</p>
                 <h3 className="menuPrice">${ale.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(ale)}>Add</button>
               </div>
             </Col>
             
@@ -348,7 +351,7 @@ const MenuPage = () => {
                 <p className="menuCalories">Calories : {tuna.calories}</p>
                 <h3 className="menuPrice">${tuna.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(tuna)}>Add</button>
               </div>
             </Col>
             <Col col-3 col-xs-12 col-s-6 col-lg-4>
@@ -364,12 +367,13 @@ const MenuPage = () => {
                 </p>
                 <h3 className="menuPrice">${salmonSplash.price}</h3>
                 <br />
-                <button className="menuButtons">Add</button>
+                <button className="menuButtons" onClick={() => addItemToCart(salmonSplash)}>Add</button>
               </div>
             </Col>
           </Row>
         </Container>
         </div>
+        
     </>
     )
 };
