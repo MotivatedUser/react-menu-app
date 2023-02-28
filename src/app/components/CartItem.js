@@ -28,9 +28,9 @@ const CartItem = ({
   };
 
   return (
-    <Container fluid>
-      <Row>
-        <Col xs="6" sm="4" md="3" lg="3" xl="3">
+    <Container>
+      <Row lg="3" md="4" sm="6" xs="12">
+        
           <div className="cart-item">
             <div className="cart-item-details">
               <h3>{item.name}</h3>
@@ -50,7 +50,7 @@ const CartItem = ({
               <button onClick={handleIncreaseQuantity}>+</button>
             </div>
           </div>
-        </Col>
+        
         
       </Row>
     </Container>
@@ -58,3 +58,4 @@ const CartItem = ({
 };
 
 export default CartItem;
+

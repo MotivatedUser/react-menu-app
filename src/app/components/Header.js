@@ -63,7 +63,7 @@ const Header = () => {
                 <FontAwesomeIcon icon={faUtensils} /> Menu
             </NavLink>
             <NavLink className="nav-link" to="/cart">
-                <FontAwesomeIcon icon={faCreditCard} /> Order
+                <FontAwesomeIcon icon={faCreditCard} /> Cart
             </NavLink>
             <NavLink className="nav-link" to="/checkout">
               Checkout testing
