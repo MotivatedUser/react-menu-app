@@ -41,14 +41,25 @@ background: linear-gradient(0deg, rgba(31,222,224,1) 0%, rgba(207,233,77,0.83937
   }
 }
 
+.App-body {
+  display: block;
+  height: auto;
+}
+
+.Cart-body {
+  display: grid;
+  height: auto;
+  border: 2px solid rgb(11, 255, 11);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+
 p {
   font-size: 1.25rem;
 }
 
 /* Navbar */
-.header {
-  
-}
 .header-title {
   font-size: 5rem;
   padding-left: 4%;
@@ -172,6 +183,10 @@ height: 31%;
   width: 5rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+}
+.menuButtons:active {
+  background-color: black;
+  color: yellow;
 }
 
 .drinkImage {

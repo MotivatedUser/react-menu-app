@@ -11,7 +11,7 @@ const CartItem = ({
   const [currentQuantity, setQuantity] = useState(quantity);
 
   const handleDecreaseQuantity = () => {
-    if (currentQuantity === 0) {
+    if (currentQuantity === 1) {
       return;
     }
     setQuantity(currentQuantity - 1);
@@ -28,9 +28,9 @@ const CartItem = ({
   };
 
   return (
-    <Container>
-      <Row lg="3" md="4" sm="6" xs="12">
-        
+    <Container className="Cart-body">
+      <Row>
+        <Col>
           <div className="cart-item">
             <div className="cart-item-details">
               <h3>{item.name}</h3>
@@ -50,12 +50,10 @@ const CartItem = ({
               <button onClick={handleIncreaseQuantity}>+</button>
             </div>
           </div>
-        
-        
+        </Col>
       </Row>
     </Container>
   );
 };
-
+console.log(CartItem);
 export default CartItem;
-

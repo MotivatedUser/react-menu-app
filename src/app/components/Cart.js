@@ -1,5 +1,5 @@
-
 import React, { useContext, useEffect, useState } from "react";
+import { Container, Row, Col } from "reactstrap";
 import CartItem from "./CartItem";
 import CheckoutButton from "./CheckoutButton";
 import { CartContext } from "./CartContent";
@@ -15,7 +15,14 @@ const Cart = () => {
   }, []);
 
   const addItemToCart = (item) => {
-    setCartItems([...cartItems, item]);
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
+      // Item already exists in cart, increase its quantity by 1
+      updateItemQuantity(existingItem, existingItem.quantity + 1);
+    } else {
+      // Item does not exist in cart, add it with quantity of 1
+      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    }
   };
 
   const removeItemFromCart = (item) => {
@@ -51,11 +58,14 @@ const Cart = () => {
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
+        <Container className="App-body">
+          <Row>
+            <Col auto>
         <div>
           {cartItems.map((cartItem) => (
             <CartItem
               key={cartItem.id}
-              item={ cartItem }
+              item={cartItem}
               quantity={1}
               handleRemoveFromCart={removeItemFromCart}
               handleUpdateQuantity={updateItemQuantity}
@@ -65,16 +75,16 @@ const Cart = () => {
             <p>Total: ${calculateTotal()}</p>
             <CheckoutButton />
           </div>
-        </div>
+        </div>  
+          </Col>
+        </Row>
+      </Container>  
       )}
     </div>
   );
 };
 
 export default Cart;
-
-
-
 
 // import React from "react";
 // import CartItem from "./CartItem";
@@ -174,7 +184,6 @@ export default Cart;
 
 // export default CartPage;
 
-
 // import React from 'react';
 
 // function Cart({ cartItems, removeFromCart }) {
@@ -183,7 +192,6 @@ export default Cart;
 //   function handleRemoveItem(item) {
 //     removeFromCart(item);
 //   }
-  
 
 //   return (
 //     <div>
