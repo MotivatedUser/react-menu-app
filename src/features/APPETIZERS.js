@@ -1,7 +1,8 @@
 import AppetizerMenu from "../app/Appetizers";
 
 export const barbie = new AppetizerMenu(
-    "Barbie Shrimp Pie",
+    1,
+    "Barbie Shrimpie",
     "App",
     9999,
     13.99,
@@ -10,6 +11,7 @@ export const barbie = new AppetizerMenu(
 )
 
 export const surprise = new AppetizerMenu(
+    2,
     "Surprise Bites",
     "App",
     100,
@@ -18,6 +20,7 @@ export const surprise = new AppetizerMenu(
 )
 
 export const cheese = new AppetizerMenu(
+    3,
     "Fisheese Sticks",
     "App",
     1000,
@@ -26,6 +29,7 @@ export const cheese = new AppetizerMenu(
 )
 
 export const platter = new AppetizerMenu(
+    4,
     "Farm Platter",
     "App",
     350,
@@ -34,6 +38,7 @@ export const platter = new AppetizerMenu(
 )
 
 export const crappie = new AppetizerMenu(
+    5,
     "Crappie Patties",
     "App",
     450,
@@ -42,6 +47,7 @@ export const crappie = new AppetizerMenu(
 )
 
 export const salmonella = new AppetizerMenu(
+    6,
     "Salmonella Surprise",
     "App",
     800,

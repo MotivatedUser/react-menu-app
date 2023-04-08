@@ -1,5 +1,6 @@
 class AppetizerMenu {
     constructor(
+        id,
         name, 
         type,
         calories,
@@ -7,6 +8,7 @@ class AppetizerMenu {
         image,
         disclaimer
     ) {
+        this.id = id
         this.name = name;
         this.type = type;
         this.calories = calories;

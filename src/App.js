@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./app/components/Header";
 import MenuPage from "./pages/MenuPage";
@@ -7,6 +8,12 @@ import CheckoutPage from "./pages/CheckoutPage";
 import Cart from "./app/components/Cart";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  const updateCartItems = (newCartItems) => {
+    setCartItems(newCartItems);
+  };
+
   return (
     <div className="App">
       <Header />
@@ -15,10 +22,15 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="menu" element={<MenuPage />} />
         <Route path="about" element={<AboutPage />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="checkout" element={<CheckoutPage />} />
+        <Route
+          path="cart"
+          element={<Cart cartItems={cartItems} updateCartItems={updateCartItems} />}
+        />
+        <Route
+          path="checkout"
+          element={<CheckoutPage cartItems={cartItems} updateCartItems={updateCartItems} />}
+        />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 }

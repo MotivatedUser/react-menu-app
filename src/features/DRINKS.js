@@ -1,6 +1,7 @@
 import MenuDrink from "../app/Drinks";
 
 export const shrimp = new MenuDrink(
+    20,
     "Shrimply Delicious",
     "Drink",
     560,
@@ -10,6 +11,7 @@ export const shrimp = new MenuDrink(
 );
 
 export const cod = new MenuDrink(
+    21,
     "Cod Cocktail",
     "Drink",
     440,
@@ -18,6 +20,7 @@ export const cod = new MenuDrink(
 );
 
 export const tuna = new MenuDrink(
+    22,
     "Tuna Tango",
     "Drink",
     788,
@@ -26,6 +29,7 @@ export const tuna = new MenuDrink(
 )
 
 export const salmonSplash = new MenuDrink(
+    23,
     "Salmon Splash",
     "Drink",
     750,
@@ -34,6 +38,7 @@ export const salmonSplash = new MenuDrink(
 )
 
 export const tonic = new MenuDrink(
+    24,
     "Trout Tonic",
     "Drink",
     150,
@@ -42,6 +47,7 @@ export const tonic = new MenuDrink(
 )
 
 export const ale = new MenuDrink(
+    25,
     "Anchovy Ale",
     "Drink",
     770,

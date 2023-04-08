@@ -12,8 +12,8 @@ import {
 } from "reactstrap";
 import "../../App.css";
 import { NavLink } from "react-router-dom";
+import Fish  from '../images/Fish.webp';
 
-import logo from "../../logo.svg";
 import { faCreditCard, faHome, faStar, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -21,19 +21,21 @@ const Header = () => {
 
   return (
     <Navbar dark expand="md" className="header">
-      <NavbarBrand className="navbar-brand" href="/">
+      <NavbarBrand className="navbar-brand d-flex align-items-center justify-content-center" href="/" style={{ width: '100%' }}>
         <img
-          src={logo}
+          src={Fish}
           alt="React logo"
           className="float-start App-logo"
-          style={{ height: 180, width: 180 }}
+          style={{ height: 100, width: 180, borderRadius: 40 }}
         />
       </NavbarBrand>
 
     <Container>
         <Row className="nav-author">
         <p className="links-container" >
-          by Doug Altermatt |
+          A Mock Ordering App by Doug Altermatt
+          </p>
+          <p>
           <a className="links" href="https://www.linkedin.com/in/d-altermatt-motivated-user/">
             LinkedIn
           </a>{" "}
@@ -48,10 +50,10 @@ const Header = () => {
         </Row>
     </Container>
       
-      <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
+      <NavbarToggler className="custom-toggler" onClick={() => setMenuOpen(!menuOpen)} />
 
       <Collapse isOpen={menuOpen} navbar>
-        <Nav className="ms-auto">
+        <Nav className="d-flex align-items-center justify-content-center">
           <NavItem className="nav-item" >
             <NavLink className="nav-link" to="/">
                 <FontAwesomeIcon icon={faHome} /> Home

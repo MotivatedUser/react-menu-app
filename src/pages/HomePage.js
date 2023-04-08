@@ -7,10 +7,10 @@ const HomePage = () => {
     <>
       <Container>
         <Row>
-          <Col col-sm-12 col-md-6 col-3>
+          <Col sm="12" md="6" >
             <ImageSlider />
           </Col>
-          <Col col-sm-12>
+          <Col sm="12" md="6">
             <FishJokes />
           </Col>
         </Row>

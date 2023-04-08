@@ -1,59 +1,38 @@
-import React, { useState } from "react";
-import { Col, Row, Container } from "reactstrap";
+import React from "react";
+import { Row, Col, Input } from "reactstrap";
 
-const CartItem = ({
-  item,
-  index,
-  handleRemoveFromCart,
-  handleUpdateQuantity,
-  quantity,
-}) => {
-  const [currentQuantity, setQuantity] = useState(quantity);
+const CartItem = ({ item, handleRemoveFromCart, handleUpdateQuantity, quantity = 1, }) => {
+  const { id, price, image, name } = item;
 
-  const handleDecreaseQuantity = () => {
-    if (currentQuantity === 1) {
-      return;
+  const handleQuantityChange = (e) => {
+    const newQuantity = parseInt(e.target.value);
+    if (newQuantity > 0) {
+      handleUpdateQuantity(item, newQuantity);
     }
-    setQuantity(currentQuantity - 1);
-    handleUpdateQuantity(item, index, currentQuantity - 1);
-  };
-
-  const handleIncreaseQuantity = () => {
-    setQuantity(currentQuantity + 1);
-    handleUpdateQuantity(item, index, currentQuantity + 1);
-  };
-
-  const handleRemove = () => {
-    handleRemoveFromCart(item, index);
   };
 
   return (
-    <Container className="Cart-body">
-      <Row>
-        <Col>
-          <div className="cart-item">
-            <div className="cart-item-details">
-              <h3>{item.name}</h3>
-              <img alt="" className="cartImage" src={item.image} />
-              <p>Quantity: {currentQuantity}</p>
-              <p>Price: ${item.price * currentQuantity}</p>
-              <button
-                className="cart-item-remove-button"
-                onClick={handleRemove}
-              >
-                Remove
-              </button>
-            </div>
-            <div className="cart-item-quantity">
-              <button onClick={handleDecreaseQuantity}>-</button>
-              <span>{currentQuantity}</span>
-              <button onClick={handleIncreaseQuantity}>+</button>
-            </div>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  );
-};
-console.log(CartItem);
+    
+      <div className="cart-item mb-4">
+        <Row>
+          <Col xs="12" md="4">
+            <img src={image} alt={name} className="cart-item-image img-fluid" />
+          </Col>
+          <Col xs="12" md="8" >
+            <h3>{name}</h3>
+            <p>Price: ${price.toFixed(2)}</p>
+            <label htmlFor={`quantity-${id}`}>Quantity:</label>
+            <Input
+              id={`quantity-${id}`}
+              type="number"
+              defaultValue={quantity}
+              onChange={handleQuantityChange}
+            />
+            <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
+          </Col>
+        </Row>
+      </div>
+    );
+  };
+
 export default CartItem;

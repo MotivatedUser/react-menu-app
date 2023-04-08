@@ -7,7 +7,6 @@ import {
   squid, twizzler } from "../features/MENU.js";
 import { barbie, surprise, cheese, platter, crappie, salmonella } from "../features/APPETIZERS";
 import { shrimp, cod, tuna, salmonSplash, tonic, ale } from "../features/DRINKS.js";
-import Cart from "../app/components/Cart";
 import { CartContext } from "../app/components/CartContent";
 
 const MenuPage = () => {
@@ -16,10 +15,6 @@ const MenuPage = () => {
     const addItemToCart = (item) => {
       setCartItems([...cartItems, item]);
       
-    };
-  
-    const calculateTotal = () => {
-      return cartItems.reduce((total, item) => total + item.price, 0);
     };
 
     return (
@@ -33,7 +28,7 @@ const MenuPage = () => {
       <Container className="App-body" >
           <h2 className="menuTitle" id="starter">Starter Menu</h2>
           <Row>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards" xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{barbie.name}</h1>
                 <img
@@ -47,7 +42,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(barbie)} >Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{surprise.name}</h1>
                 <img
@@ -61,7 +56,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(surprise)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{cheese.name}</h1>
                 <img
@@ -75,7 +70,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(cheese)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{platter.name}</h1>
                 <img
@@ -91,7 +86,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(platter)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{crappie.name}</h1>
                 <img
@@ -107,7 +102,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(crappie)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{salmonella.name}</h1>
                 <img
@@ -128,7 +123,7 @@ const MenuPage = () => {
         <Container>
           <h2 className="menuTitle" id="mainCourse" >Main Dishes</h2>
           <Row>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4 col-xl-3>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{tunaSandwich.name}</h1>
                 <img
@@ -146,7 +141,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(tunaSandwich)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{salmonSteak.name}</h1>
                 <img
@@ -164,7 +159,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(salmonSteak)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{catfish.name}</h1>
                 <img
@@ -180,7 +175,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(catfish)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{trout.name}</h1>
                 <img
@@ -196,7 +191,7 @@ const MenuPage = () => {
                 <button className="menuButtons"  onClick={() => addItemToCart(trout)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{walleyeSticks.name}</h1>
                 <img
@@ -214,7 +209,7 @@ const MenuPage = () => {
                 <button className="menuButtons"  onClick={() => addItemToCart(walleyeSticks)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{perch.name}</h1>
                 <img
@@ -230,7 +225,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(perch)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{sturgeon.name}</h1>
                 <img
@@ -246,7 +241,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(sturgeon)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{twizzler.name}</h1>
                 <img
@@ -262,7 +257,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(twizzler)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{squid.name}</h1>
                 <img
@@ -283,7 +278,7 @@ const MenuPage = () => {
         <Container>
           <h2 className="menuTitle" id="drinks" >Drink Menu</h2>
           <Row>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{shrimp.name}</h1>
                 <img
@@ -297,7 +292,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(shrimp)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{cod.name}</h1>
                 <img
@@ -312,7 +307,7 @@ const MenuPage = () => {
               </div>
             </Col>
             
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{tonic.name}</h1>
                 <img
@@ -325,7 +320,8 @@ const MenuPage = () => {
                 <br />
                 <button className="menuButtons" onClick={() => addItemToCart(tonic)}>Add</button>
               </div>
-            </Col><Col col-3 col-xs-12 col-s-6 col-lg-4>
+            </Col>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{ale.name}</h1>
                 <img
@@ -340,7 +336,7 @@ const MenuPage = () => {
               </div>
             </Col>
             
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{tuna.name}</h1>
                 <img
@@ -354,7 +350,7 @@ const MenuPage = () => {
                 <button className="menuButtons" onClick={() => addItemToCart(tuna)}>Add</button>
               </div>
             </Col>
-            <Col col-3 col-xs-12 col-s-6 col-lg-4>
+            <Col className="menuCards"  xs="12" md="6">
               <div className="allMenu">
                 <h1 className="menuName">{salmonSplash.name}</h1>
                 <img

@@ -1,6 +1,7 @@
 import MenuItem from "../app/Menu.js";
 
 export const tunaSandwich = new MenuItem(
+    50,
     "Tuna Sandwich",
     "Meal",
     1200,
@@ -11,6 +12,7 @@ export const tunaSandwich = new MenuItem(
 console.log(tunaSandwich)
 
 export const catfish = new MenuItem(
+    51,
     "Catfish Plate",
     "Meal",
     896,
@@ -20,6 +22,7 @@ export const catfish = new MenuItem(
 );
 
 export const salmonSteak = new MenuItem(
+    52,
     "Salmon Steak",
     "Meal",
     1200,
@@ -29,6 +32,7 @@ export const salmonSteak = new MenuItem(
 );
 
 export const trout = new MenuItem(
+    53,
     "Trout and Caeser",
     "Meal",
     1000,
@@ -38,6 +42,7 @@ export const trout = new MenuItem(
 );
 
 export const walleyeSticks = new MenuItem(
+    54,
     "Walleye Sticks",
     "Meal",
     700,
@@ -47,6 +52,7 @@ export const walleyeSticks = new MenuItem(
 )
 
 export const perch = new MenuItem(
+    55,
     "Fresh Perch",
     "Meal",
     550,
@@ -56,6 +62,7 @@ export const perch = new MenuItem(
 )
 
 export const sturgeon = new MenuItem (
+    56,
     "Fish Apples",
     "Meal",
     468.9,
@@ -65,6 +72,7 @@ export const sturgeon = new MenuItem (
 )
 
 export const squid = new MenuItem(
+    57,
     "Squid Nuggets",
     "Meal",
     625,
@@ -74,6 +82,7 @@ export const squid = new MenuItem(
 )
 
 export const twizzler = new MenuItem(
+    58,
     "Tuna Twizzlers",
     "Meal",
     990,

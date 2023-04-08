@@ -194,3 +194,30 @@ height: 31%;
   height: 30%;
   border-radius: 50%;
 }
+
+/* Cart */
+.cart-item {
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.cart-item-image {
+  max-width: 100%;
+}
+
+.cart-total {
+  text-align: right;
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-color: black;
+}
+.menuCards {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
