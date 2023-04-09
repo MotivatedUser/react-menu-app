@@ -14,6 +14,7 @@ const HomePage = () => {
             <FishJokes />
           </Col>
         </Row>
+        <hr />
         <Row>
           <div>
             <h1 className="header-subtitle">Fish so fresh, you'll think we have a bathtub in the kitchen... oh wait, we do!</h1>

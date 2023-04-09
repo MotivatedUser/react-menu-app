@@ -58,7 +58,7 @@ export const perch = new MenuItem(
     550,
     16.89,
     "https://images.unsplash.com/photo-1583250087320-c300be4d590c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
-    "This item contains fish"
+    "This item may contain fish"
 )
 
 export const sturgeon = new MenuItem (

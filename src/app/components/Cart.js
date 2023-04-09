@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../App.css";
 import CartItem from "./CartItem";
-import CheckoutButton from "./CheckoutButton";
+import GoToCheckoutButton from "./GoToCheckoutButton";
 import { CartContext } from "./CartContent";
 
 const Cart = () => {
@@ -43,14 +43,6 @@ const Cart = () => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  useEffect(() => {
-    const defaultQuantityItems = cartItems.map((cartItem) => ({
-      ...cartItem,
-      quantity: cartItem.quantity || 1,
-    }));
-    setCartItems(defaultQuantityItems);
-  }, []);
-
   return (
     <div className="cart">
       <h2>Your Cart</h2>
@@ -59,7 +51,7 @@ const Cart = () => {
       ) : (
         <Container className="App-body">
           <Row>
-            <Col xs-12 md-8 >
+            <Col xs="12" md="8" >
               
                 {cartItems.map((cartItem) => (
                   <CartItem
@@ -70,10 +62,10 @@ const Cart = () => {
                   />
                 ))}
                 </Col>
-                <Col xs-12 md-4 >
+                <Col xs="12" md="4" >
                 <div className="cart-total">
-                  <p>Total: ${calculateTotal()}</p>
-                  <CheckoutButton />
+                  <p className="left" >Subtotal: ${calculateTotal()}</p>
+                  <GoToCheckoutButton />
                 </div>
               
             </Col>

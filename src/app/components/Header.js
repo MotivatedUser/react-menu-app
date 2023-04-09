@@ -50,7 +50,7 @@ const Header = () => {
         </Row>
     </Container>
       
-      <NavbarToggler className="custom-toggler" onClick={() => setMenuOpen(!menuOpen)} />
+      <NavbarToggler xs="12" md="4" className="custom-toggler" onClick={() => setMenuOpen(!menuOpen)} />
 
       <Collapse isOpen={menuOpen} navbar>
         <Nav className="d-flex align-items-center justify-content-center">
@@ -66,9 +66,6 @@ const Header = () => {
             </NavLink>
             <NavLink className="nav-link" to="/cart">
                 <FontAwesomeIcon icon={faCreditCard} /> Cart
-            </NavLink>
-            <NavLink className="nav-link" to="/checkout">
-              Checkout testing
             </NavLink>
           </NavItem>
         </Nav>

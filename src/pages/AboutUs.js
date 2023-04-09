@@ -1,7 +1,7 @@
 const AboutPage = () => {
   return (
-    <div>
-    <h1>Welcome to The Codfather's Oceanic Eats!</h1>
+    <div className="paddingAbout">
+    <h1 className="header-subtitle">Welcome to The Codfather's Oceanic Eats!</h1>
     <p>We're not your average seafood joint - we're the funkiest fish restaurant in town. Our mission is to provide our guests with the freshest seafood dishes and a good laugh.</p>
     <p>Our restaurant is decorated with all kinds of oceanic puns and funny jokes. You'll feel like you're dining under the sea with our quirky artwork and vibrant ambiance.</p>
     <p>Our menu is packed with a variety of mouth-watering seafood dishes that will leave you hooked. From classic fish and chips to seafood pasta, there's something for everyone. All of our dishes are made fresh to order using only the finest ingredients.</p>

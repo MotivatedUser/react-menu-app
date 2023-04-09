@@ -1,94 +1,74 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from "react";
+import { CartContext } from "../app/components/CartContent";
 
-function Checkout() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
-  const [zip, setZip] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
-  const [expDate, setExpDate] = useState('');
-  const [cvv, setCvv] = useState('');
+const CheckoutPage = () => {
+  const [cartItems, setCartItems] = useContext(CartContext);
+  const [customTip, setCustomTip] = useState("");
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    // Handle form submission and order processing
-  }
+  const taxRate = 0.087; // 8.7% tax
+  const suggestedTips = [0.12, 0.15, 0.18]; // 12%, 15%, 18%
+
+  const calculateTotal = () => {
+    return cartItems.reduce((total, cartItem) => {
+      return total + cartItem.price * cartItem.quantity;
+    }, 0);
+  };
+
+  const calculateTax = () => {
+    return calculateTotal() * taxRate;
+  };
+
+  const calculateTip = (tipPercentage) => {
+    return calculateTotal() * tipPercentage;
+  };
+
+  const calculateTotalWithCustomTip = () => {
+    return calculateTotal() + calculateTax() + parseFloat(customTip);
+  };
+
+  const handleSuggestedTipClick = (tipAmount) => {
+    setCustomTip(tipAmount.toFixed(2));
+  };
+
+  const handlePlaceOrder = () => {
+    // Reset the cart
+    setCartItems([]);
+
+    // Clear cart items from local storage
+    localStorage.removeItem("cartItems");
+
+    // Show a message indicating a successful order
+    alert("Order placed successfully! Despite the sky-high demand, we still don't offer refunds... but who knows what the future holds! 😉");
+  };
 
   return (
-    <div>
-      <h1>Checkout</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input type="text" value={firstName} onChange={(event) => setFirstName(event.target.value)} />
-        </label>
-        <label>
-          Last Name:
-          <input type="text" value={lastName} onChange={(event) => setLastName(event.target.value)} />
-        </label>
-        <label>
-          Email:
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-        </label>
-        <label>
-          Address:
-          <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} />
-        </label>
-        <label>
-          City:
-          <input type="text" value={city} onChange={(event) => setCity(event.target.value)} />
-        </label>
-        <label>
-          State:
-          <input type="text" value={state} onChange={(event) => setState(event.target.value)} />
-        </label>
-        <label>
-          Zip:
-          <input type="text" value={zip} onChange={(event) => setZip(event.target.value)} />
-        </label>
-        <label>
-          Card Number:
-          <input type="text" value={cardNumber} onChange={(event) => setCardNumber(event.target.value)} />
-        </label>
-        <label>
-          Expiration Date:
-          <input type="text" value={expDate} onChange={(event) => setExpDate(event.target.value)} />
-        </label>
-        <label>
-          CVV:
-          <input type="text" value={cvv} onChange={(event) => setCvv(event.target.value)} />
-        </label>
-        <button type="submit">Place Order</button>
-      </form>
+    <div className="checkout-page">
+      <h2>Checkout</h2>
+      <p>Subtotal: ${calculateTotal().toFixed(2)}</p>
+      <p>Tax (8.7%): ${calculateTax().toFixed(2)}</p>
+      <h3>Suggested Tips:</h3>
+      {suggestedTips.map((tip) => (
+        <button
+          key={tip}
+          onClick={() => handleSuggestedTipClick(calculateTip(tip))}
+        >
+          {Math.round(tip * 100)}% = ${calculateTip(tip).toFixed(2)}
+        </button>
+      ))}
+      <label htmlFor="custom-tip">Tip:</label>
+      <input
+        id="custom-tip"
+        type="number"
+        value={customTip}
+        onChange={(e) => setCustomTip(e.target.value)}
+      />
+      <p>Tip: ${customTip}</p>
+      <p>Total w/ Tip: ${calculateTotalWithCustomTip().toFixed(2)}</p>
+      <button className="place-order-button" onClick={handlePlaceOrder}>
+        Place Order
+      </button>
     </div>
   );
-}
+};
 
-export default Checkout;
-
-
-// import React, { useContext } from "react";
-// import Cart from "../app/components/Cart";
-// import { CartContext } from "../app/components/CartContent";
-
-// const CheckoutPage = () => {
-//   const [cartItems, setCartItems] = useContext(CartContext);
-
-//   const calculateTotal = () => {
-//     return cartItems.reduce((total, item) => total + item.price, 0);
-//   };
-
-//   return (
-//     <>
-//       <h2>Checkout</h2>
-//       <Cart cartItems={cartItems} />
-//       <p>Total: ${calculateTotal()}</p>
-//       <button onClick={() => setCartItems([])}>Clear Cart</button>
-//     </>
-//   );
-// };
-
-// export default CheckoutPage;
+export default CheckoutPage;
