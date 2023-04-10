@@ -9,13 +9,6 @@ import { CartContext } from "./CartContent";
 const Cart = () => {
   const [cartItems, setCartItems] = useContext(CartContext);
 
-  useEffect(() => {
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
-    if (storedCartItems) {
-      setCartItems(storedCartItems);
-    }
-  }, [setCartItems]);
-
   const removeItemFromCart = (item) => {
     const updatedCartItems = cartItems.filter(
       (cartItem) => cartItem.id !== item.id

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "../App.css";
@@ -58,6 +58,9 @@ const MenuPage = () => {
   const handleAddToCart = (item) => {
     addItemToCart(item);
   };
+  useEffect(() => {
+    console.log("Updated cart items:", cartItems);
+  }, [cartItems]);
 
   return (
     <>
