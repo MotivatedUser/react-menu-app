@@ -14,7 +14,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/react-menu-app" >
         <CartProvider>
           <App />
         </CartProvider>

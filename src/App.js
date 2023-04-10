@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="menu" element={<MenuPage />} />
@@ -31,6 +31,7 @@ function App() {
           element={<CheckoutPage cartItems={cartItems} updateCartItems={updateCartItems} />}
         />
       </Routes>
+      
     </div>
   );
 }
