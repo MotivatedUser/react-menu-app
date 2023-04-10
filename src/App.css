@@ -72,10 +72,10 @@ p {
   font-weight: 600;
 }
 .nav-item {
-  background-color: rgb(207, 255, 207);
+  background-color: rgb(248, 205, 205);
   
   padding: 5%;
-  border: 2px solid blue;
+  border: 2px solid rgb(248, 35, 35);
   border-radius: 50%;
 }
 
@@ -107,7 +107,7 @@ p {
 
 .image {
   height: 25rem;
-  width: 17rem;
+  width: 17.5rem;
 }
 
 .cartImage {
