@@ -21,12 +21,12 @@ const Header = () => {
 
   return (
     <Navbar dark expand="md" className="header">
-      <NavbarBrand className="navbar-brand d-flex align-items-center justify-content-center" href="/" style={{ width: '100%' }}>
+      <NavbarBrand className="navbar-brand d-flex align-items-center justify-content-center" href="/" >
         <img
           src={Fish}
           alt="React logo"
           className="float-start App-logo"
-          style={{ height: 100, width: 180, borderRadius: 40 }}
+          style={{ height: 100, width: 144, borderRadius: 40 }}
         />
       </NavbarBrand>
 
