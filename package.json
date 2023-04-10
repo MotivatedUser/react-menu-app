@@ -1,6 +1,7 @@
 {
   "name": "menu-app",
   "version": "0.1.0",
+  "homepage": "https://MotivatedUser.github.io/react-menu-app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
@@ -49,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
