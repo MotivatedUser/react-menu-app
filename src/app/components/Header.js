@@ -46,7 +46,7 @@ const Header = () => {
 
         <Row className="nav-title" >
         <h1 className="header-title" >The Codfather's Oceanic Eats</h1>
-        <h4 className="header-subtitle" >Reel-y good seafood at The Codfather's.</h4>
+        <h2 className="header-subtitle" >Reel-y good seafood at The Codfather's.</h2>
         </Row>
     </Container>
       
